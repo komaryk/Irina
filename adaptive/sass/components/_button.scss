@@ -1,0 +1,13 @@
+
+.button {
+	text-transform: uppercase;
+}
+.button-rounded {
+	border-radius: 35px;
+}
+.button__search {
+	color: $white;
+	background-color: $brand-primary;
+	padding: 25px 32px 21px;
+	font-size: 18px;
+}

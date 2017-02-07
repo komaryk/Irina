@@ -1,0 +1,21 @@
+body {
+	font: $base-font;
+}
+.wrap {}
+.container {
+	position: relative;
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.nav {
+	a {
+    color: $font-light;
+    text-transform: uppercase;
+	}
+}
+
+.main {}
+.main-aricles {}
+.link {}
+.link-more {}

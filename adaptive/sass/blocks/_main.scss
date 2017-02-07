@@ -1,0 +1,73 @@
+.article {
+    padding: 27px 267px 27px 257px;
+    text-align: justify;
+    strong {
+        color: #000000;
+        font-weight: 700;
+    }
+    a {
+        color: #00b9e1;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    .social {
+        margin-right: -267px;
+    }
+    .social-item {
+    color: #fff;
+    background-color: #060606;
+    border-radius: 5px;
+    text-shadow: 0 0 3px #000;
+    }
+    date {
+        margin-bottom: 30px;
+    }
+}
+.article-caption {
+    padding: 0 24px;
+    margin-bottom: 24px;
+    color: #696969;
+    font-family: Georgia;
+    font-size: 16px;
+    font-style: italic;
+}
+.article-paragraph {
+    line-height: 1.5;
+    margin-bottom: 30px;
+    margin-top: 24px;
+}
+.article-quote {
+    margin: 31px 0 27px;
+    padding: 0 50px 0 123px;
+    position: relative;
+    .fa.fa-pull-left {
+        position: absolute;
+        left: 47px;
+    }
+}
+.article-img {
+    background-size: cover;
+    background-position: 50%;
+    width: 100%;
+    height: 0;
+    padding-top: 65%;
+    background-image: url("../images/article-img.png");
+    margin: 40px 0 25px;
+}
+.article-subtitle {
+    margin-left: -120px;
+    text-transform: uppercase;
+}
+.article-slider {}
+.article-emphesis {
+    border-left: 9px solid #696969;
+    color: #696969;
+    padding-left: 47px;
+    margin-bottom: 30px;
+    margin-top: 24px;
+}
+.social-item {}
+.social-item-fb {}
+.social-item-tw {}
+.social-item-gl {}
+.social-item-vk {}
