@@ -15,7 +15,12 @@ body {
 	}
 }
 
-.main {}
-.main-aricles {}
+.main {
+	background-color: $grey-lightest;
+}
+.main-aricles {
+	font-size: 0;
+	padding: 46px 0 35px;
+}
 .link {}
 .link-more {}
