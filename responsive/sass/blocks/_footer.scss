@@ -1,0 +1,60 @@
+.footer
+{
+    position: relative;
+
+    padding: 58px 0 40px;
+
+    color: $white;
+    background-image: url('../images/hero-bg.png');
+    background-position: 50%;
+    background-size: cover;
+    &:before
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        content: '';
+
+        opacity: .7;
+        background-color: #000;
+    }
+    & > *
+    {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.footer {}
+.container {}
+.form {}
+.subscribe-form {}
+.subscribe__title {
+    font-size: 24px;
+}
+.input {}
+.subscribe__content {
+    padding-right: 1px;
+    line-height: 57px;
+}
+.subscribe__label {}
+.icon-envelope-o {}
+.subscribe__input {
+    font-size: 18px;
+    font-weight: 300;
+    color: $white;
+    &::-webkit-input-placeholder
+    {
+        color: $white;
+    }
+    &:-ms-input-placeholder
+    {
+        color: $white;
+    }
+}
+.button {}
+.button--primary {}
+.subscribe__button {}

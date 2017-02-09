@@ -1,0 +1,239 @@
+.button {
+	text-transform: uppercase;
+}
+.button--rounded,
+.button--primary {
+	border-radius: 35px;
+}
+.button--primary {
+    color: $white;
+    background-color: $brand-primary;
+    box-shadow: 0 2px 0 #c1412e;
+}
+.search__button {
+    padding: 25px 32px 21px;
+    font-size: 18px;
+}
+.subscribe__button {
+    padding: 17px;
+    font-size: 14px;
+}
+
+//IcoMoon 
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-right:before {
+  content: "\e905";
+}
+.icon-envelope-o:before {
+  content: "\f003";
+}
+.icon-star:before {
+  content: "\f005";
+}
+.icon-star-o:before {
+  content: "\f006";
+}
+.icon-map-marker:before {
+  content: "\f041";
+}
+.icon-leaf:before {
+  content: "\f06c";
+}
+.icon-chevron-down:before {
+  content: "\f078";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-google-plus:before {
+  content: "\f0d5";
+}
+.icon-comments:before {
+  content: "\f0e6";
+}
+.icon-flash:before {
+  content: "\f0e7";
+}
+.icon-youtube:before {
+  content: "\f167";
+}
+.icon-graduation-cap {
+	&:before {
+	  	content: "\f19d";
+	}
+}
+.icon-bus {
+	&:before {
+	  	content: "\f207";
+	}
+}
+.icon-user:before {
+  content: "\e902";
+}
+.icon-search:before {
+  content: "\e903";
+}
+.icon-child {
+	&:before {
+	  	content: "\e900";
+	}
+}
+.icon-music:before {
+  content: "\e904";
+}
+.icon-home {
+	&:before {
+	  	content: "\e901";
+	}
+}
+.icon-music {
+	&:before {
+  		content: "\e904";
+  	}
+}
+
+.filter,
+.post
+{
+    .icon-graduation-cap {
+        background-color: $grey-light;
+    }
+    .icon-bus {
+        background-color: $purple;
+    }
+    .icon-child {
+        background-color: $grey-light;
+    }
+    .icon-home {
+        background-color: $green;
+    }
+    .icon-music {
+        background-color: $orange;
+    }
+}
+
+// Icons
+
+.post-icon,
+.offer-icon,
+.text-icon {
+    border-radius: 50%;
+}
+
+.post-icon {
+    border: 3px solid $white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -30px;
+    margin-bottom: -30px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+    color: $white;
+    z-index: 2;
+}
+
+.review__post-icon {
+    left: 50px;
+}
+
+.offer-icon {
+    border: 2px solid $grey;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    line-height: 100px;
+    font-size: 45px;
+    color: $grey;
+    position: relative;
+    margin: 0 27px;
+    &:after {
+      content: "";
+      width: 50px;
+      border-bottom: 2px solid $grey-lighter;
+      position: absolute;
+      left: 104px;
+      top: 50px;
+    }
+    &:last-of-type {
+      &:after {
+        content: none;
+      }
+    }
+}
+
+.offer__icons
+{
+    .icon-graduation-cap {
+        color: $grey-light;
+        border-color: $grey-light;
+    }
+    .icon-bus {
+        color: $purple;
+        border-color: $purple;
+    }
+    .icon-child {
+        color: $grey-light;
+        border-color: $grey-light;
+    }
+    .icon-home {
+        color: $green;
+        border-color: $green;
+    }
+    .icon-music {
+        color: $orange;
+        border-color: $orange;
+    }
+    .offer-icon:not(.icon--selected) {
+        color: $grey;
+        border-color: $grey;
+    }
+}
+
+// Inputs
+
+.input
+{
+    font-family: 'Gotham';
+    font-size: 18px;
+    line-height: 50px;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    padding: 0 20px;
+
+    text-align: left;
+
+    color: $white;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, .1);
+    &::-webkit-input-placeholder
+    {
+        color: $white;
+    }
+    &:-ms-input-placeholder
+    {
+        color: $white;
+    }
+}
