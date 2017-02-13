@@ -1,0 +1,82 @@
+// Offer
+
+.offer
+{
+    font-size: 0;
+
+    padding: 84px 111px 140px;
+}
+.offer__title
+{
+    font-size: 22px;
+
+    margin-bottom: 3px;
+
+    color: $font;
+}
+.offer__caption
+{
+    font-size: 16px;
+
+    margin-bottom: 65px;
+
+    color: $font-light;
+}
+.offer__icons
+{
+    margin-bottom: 36px;
+}
+
+
+
+
+
+
+.offer__title--green
+{
+    margin-bottom: 44px;
+
+    color: $green;
+}
+.offer__text
+{
+    font: $base-font;
+    line-height: 2;
+
+    position: relative;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    width: 50%;
+    padding-right: 25px;
+    padding-left: 126px;
+
+    text-align: justify;
+    &:before
+    {
+        font-family: 'IcoMoon';
+        font-size: 30px;
+        line-height: 60px;
+
+        position: absolute;
+        left: 14px;
+
+        width: 60px;
+        height: 60px;
+
+        text-align: center;
+
+        color: $white;
+        border-radius: 50px;
+        background-color: $green;
+    }
+    &--flash:before
+    {
+        content: '\f06c';
+    }
+    &--leaf:before
+    {
+        content: '\f0e7';
+    }
+}

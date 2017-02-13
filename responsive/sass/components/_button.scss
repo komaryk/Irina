@@ -1,130 +1,172 @@
-.button {
-	text-transform: uppercase;
+.button,
+%button
+{
+    text-transform: uppercase;
 }
 .button--rounded,
-.button--primary {
-	border-radius: 35px;
+%button--rounded
+{
+    @extend %button;
+    border-radius: 35px;
 }
-.button--primary {
+.button--primary
+{
+    @extend %button--rounded;
     color: $white;
     background-color: $brand-primary;
     box-shadow: 0 2px 0 #c1412e;
+    font-weight: bold;
 }
-.search__button {
-    padding: 25px 32px 21px;
+.search__button
+{
     font-size: 18px;
+
+    padding: 20px 32px 18px;
 }
-.subscribe__button {
-    padding: 17px;
+.subscribe__button
+{
     font-size: 14px;
+
+    padding: 17px;
 }
 
 //IcoMoon 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+[class^='icon-'],
+[class*=' icon-']
+{
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    text-transform: none;
+
+    speak: none;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-right:before {
-  content: "\e905";
+.icon-arrow-right:before
+{
+    content: '\e905';
 }
-.icon-envelope-o:before {
-  content: "\f003";
+.icon-envelope-o:before
+{
+    content: '\f003';
 }
-.icon-star:before {
-  content: "\f005";
+.icon-star:before
+{
+    content: '\f005';
 }
-.icon-star-o:before {
-  content: "\f006";
+.icon-star-o:before
+{
+    content: '\f006';
 }
-.icon-map-marker:before {
-  content: "\f041";
+.icon-map-marker:before
+{
+    content: '\f041';
 }
-.icon-leaf:before {
-  content: "\f06c";
+.icon-leaf:before
+{
+    content: '\f06c';
 }
-.icon-chevron-down:before {
-  content: "\f078";
+.icon-chevron-down:before
+{
+    content: '\f078';
 }
-.icon-twitter:before {
-  content: "\f099";
+.icon-twitter:before
+{
+    content: '\f099';
 }
-.icon-facebook:before {
-  content: "\f09a";
+.icon-facebook:before
+{
+    content: '\f09a';
 }
-.icon-google-plus:before {
-  content: "\f0d5";
+.icon-google-plus:before
+{
+    content: '\f0d5';
 }
-.icon-comments:before {
-  content: "\f0e6";
+.icon-comments:before
+{
+    content: '\f0e6';
 }
-.icon-flash:before {
-  content: "\f0e7";
+.icon-flash:before
+{
+    content: '\f0e7';
 }
-.icon-youtube:before {
-  content: "\f167";
+.icon-youtube:before
+{
+    content: '\f167';
 }
-.icon-graduation-cap {
-	&:before {
-	  	content: "\f19d";
-	}
+.icon-graduation-cap
+{
+    &:before
+    {
+        content: '\f19d';
+    }
 }
-.icon-bus {
-	&:before {
-	  	content: "\f207";
-	}
+.icon-bus:before
+{
+    content: '\f207';
 }
-.icon-user:before {
-  content: "\e902";
+.icon-user:before
+{
+    content: '\e902';
 }
-.icon-search:before {
-  content: "\e903";
+.icon-search:before
+{
+    content: '\e903';
 }
-.icon-child {
-	&:before {
-	  	content: "\e900";
-	}
+.icon-child
+{
+    &:before
+    {
+        content: '\e900';
+    }
 }
-.icon-music:before {
-  content: "\e904";
+.icon-music:before
+{
+    content: '\e904';
 }
-.icon-home {
-	&:before {
-	  	content: "\e901";
-	}
+.icon-home
+{
+    &:before
+    {
+        content: '\e901';
+    }
 }
-.icon-music {
-	&:before {
-  		content: "\e904";
-  	}
+.icon-music
+{
+    &:before
+    {
+        content: '\e904';
+    }
 }
 
 .filter,
 .post
 {
-    .icon-graduation-cap {
+    .icon-graduation-cap
+    {
         background-color: $grey-light;
     }
-    .icon-bus {
+    .icon-bus
+    {
         background-color: $purple;
     }
-    .icon-child {
+    .icon-child
+    {
         background-color: $grey-light;
     }
-    .icon-home {
+    .icon-home
+    {
         background-color: $green;
     }
-    .icon-music {
+    .icon-music
+    {
         background-color: $orange;
     }
 }
@@ -133,77 +175,102 @@
 
 .post-icon,
 .offer-icon,
-.text-icon {
+.text-icon
+{
     border-radius: 50%;
 }
 
-.post-icon {
-    border: 3px solid $white;
+.post-icon
+{
+    font-size: 24px;
+    line-height: 60px;
+
     position: absolute;
+    z-index: 2;
     bottom: 0;
     left: 50%;
+
+    width: 55px;
+    height: 55px;
+    margin-bottom: -31px;
     margin-left: -30px;
-    margin-bottom: -30px;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    font-size: 24px;
+
     color: $white;
-    z-index: 2;
+    border: 3px solid $white;
 }
 
-.review__post-icon {
-    left: 50px;
+.review__post-icon
+{
+    left: 49px;
+    margin-bottom: -33px;
 }
 
-.offer-icon {
-    border: 2px solid $grey;
+.offer-icon
+{
+    font-size: 45px;
+    line-height: 100px;
+
+    position: relative;
+
+    display: inline-block;
+
     width: 100px;
     height: 100px;
-    display: inline-block;
-    line-height: 100px;
-    font-size: 45px;
+    // margin: 0 27px;
+    margin-right: 59px;
+
     color: $grey;
-    position: relative;
-    margin: 0 27px;
-    &:after {
-      content: "";
-      width: 50px;
-      border-bottom: 2px solid $grey-lighter;
-      position: absolute;
-      left: 104px;
-      top: 50px;
+    border: 2px solid $grey;
+    &:after
+    {
+        position: absolute;
+        top: 50px;
+        left: 104px;
+
+        width: 50px;
+
+        content: '';
+
+        border-bottom: 2px solid $grey-lighter;
     }
-    &:last-of-type {
-      &:after {
-        content: none;
-      }
+    &:last-of-type
+    {
+        &:after
+        {
+            content: none;
+        }
     }
 }
 
 .offer__icons
 {
-    .icon-graduation-cap {
+    .icon-graduation-cap
+    {
         color: $grey-light;
         border-color: $grey-light;
     }
-    .icon-bus {
+    .icon-bus
+    {
         color: $purple;
         border-color: $purple;
     }
-    .icon-child {
+    .icon-child
+    {
         color: $grey-light;
         border-color: $grey-light;
     }
-    .icon-home {
+    .icon-home
+    {
         color: $green;
         border-color: $green;
     }
-    .icon-music {
+    .icon-music
+    {
         color: $orange;
         border-color: $orange;
     }
-    .offer-icon:not(.icon--selected) {
+    .offer-icon:not(.icon--selected)
+    {
         color: $grey;
         border-color: $grey;
     }
@@ -220,7 +287,7 @@
     display: inline-block;
 
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 0 20px 0 30px;
 
     text-align: left;
 
@@ -236,26 +303,67 @@
     {
         color: $white;
     }
-    &--open {
-      & > .city,
-      .type {
-        display: block;
-      }
+    &--open
+    {
+        & > .city,
+        .type
+        {
+            display: block;
+        }
     }
+}
+
+.search__input
+{
+    display: block;
+
+    width: 48%;
+    margin: 98px auto 28px;
+    line-height: 55px;
+
+    background-color: rgba(255, 255, 255, .1);
 }
 
 // Select
 
-.select {
-  position: absolute;
-  
-  &--open {
-    background-color: #110c04;
-    opacity: 0.8;
-    .city,
-    .type,
-    .navbar__location {
-      display: block;
+.select
+{
+    position: absolute;
+    &--open
+    {
+        opacity: .8;
+        background-color: #110c04;
+        .city,
+        .type,
+        .navbar__location
+        {
+            display: block;
+        }
     }
-  }
+}
+
+// Link
+.link {
+    font-weight: bold;
+    color: $font;
+    border-bottom: 1px solid $grey-lighter;
+}
+.link--more
+{
+    font-size: 18px;
+    line-height: 1;
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    &:after
+    {
+        font-family: 'IcoMoon';
+        font-size: 14px;
+
+        content: '\e905';
+
+        border: none;
+    }
 }

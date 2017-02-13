@@ -10,7 +10,7 @@ $large-desktop-width: 1200px;
 }
 
 @mixin mobile {
-  @media screen and (min-width: #{$mobile-width - 1px}) and (max-width: #{$tablet-width - 1px}) {
+  @media screen and (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
     @content;
   }
 }

@@ -5,11 +5,15 @@
 @import "core/_mixin";
 
 @import "_base";
+@import "_animations";
 @import "fonts/font";
 
 @import "components/_button";
 @import "blocks/_header";
 @import "blocks/_search";
 @import "blocks/_navbar";
-@import "blocks/_main";
+@import "blocks/_post";
+@import "blocks/_location";
+@import "blocks/_review";
+@import "blocks/_offer";
 @import "blocks/_footer"

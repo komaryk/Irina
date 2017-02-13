@@ -12,37 +12,37 @@
 		<a href="#" class="logo">
 			<img src="../images/logo.png" alt="">
 		</a>
-		<nav class="nav header-nav">
-			<a href="#" class="header-nav--item">
+		<nav class="nav header__nav--open">
+			<a href="#" class="nav__item">
 				Reality
 			</a>
-			<a href="#" class="header-nav--item">
+			<a href="#" class="nav__item">
 				Living
 			</a>
-			<a href="#" class="header-nav--item">
+			<a href="#" class="nav__item">
 				Education
 			</a>
-			<a href="#" class="header-nav--item">
+			<a href="#" class="nav__item">
 				Entertainment
 			</a>
-			<a href="#" class="header-nav--item">
+			<a href="#" class="nav__item">
 				Mobility
 			</a>
 		</nav>
-		<a href="" class="header--button header--button__search">
+		<a href="" class="header__button header__button--search">
 			
 		</a>
-		<a href="" class="header--button header--button__user">
+		<a href="" class="header__button header__button--login">
 			Login
 		</a>
 	</header>
 	<section class="search">
 		<div class="container">
-			<h2 class="search-title">
+			<h2 class="search__title">
 				What are you looking for?
 			</h2>
-			<ul class="input select search-category search-category__city">
-				<li class="city city__selected">
+			<ul class="input select search__category search__category--city">
+				<li class="city city--selected">
 					Dubai
 				</li>
 				<li class="city">
@@ -55,8 +55,8 @@
 					Kyiv
 				</li>
 			</ul>
-			<ul class="input select search-category search-category__type">
-				<li class="type type__selected">
+			<ul class="input select search__category search__category--type">
+				<li class="type type--selected">
 					Education
 				</li>
 				<li class="type">
@@ -69,8 +69,8 @@
 					Mobility
 				</li>
 			</ul>
-			<input type="text" class="search-category input search-input" placeholder="Keyword, name, date, ...">
-			<button class="button button--primary search__button">
+			<input type="text" class="input search__input" placeholder="Keyword, name, date, ...">
+			<button class="button--primary search__button">
 				Search
 			</button>
 		</div>
@@ -141,367 +141,515 @@
 			</div>
 		</div>
 	</div>
-	<div class="main">
+	<section class="main">
 		<div class="container">
-			<div class="main-aricles">
+			<div class="main__posts">
 				<!-- block location -->
-				
-				<div class="post location post--home">
-					<figure class="post-img location__post-img">
-						<i class="post-icon icon-home location__post-icon"></i>
-						<span class="button--rounded price">
-							$2,990
-						</span>
-					</figure>
-					<div class="panel location__panel">
-						<h5 class="location__title">
-							2 bedroom house for rent in Dubai
-						</h5>
-						<h4 class="location__host">
-							Vision Agency
-						</h4>
-						<div class="rating location__rating">
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star-o"></span>
-						</div>
-						<span class="rating-votes">(365)</span>
-					</div>
-				</div>
-				
-				<div class="post location post--music">
-					<figure class="post-img location__post-img">
-						<i class="post-icon icon-music location__post-icon"></i>
-					</figure>
-					<div class="panel location__panel">
-						<h5 class="location__title">
-							Beach party festival 2014
-						</h5>
-						<h4 class="location__host">
-							Long beach
-						</h4>
-						<div class="rating location__rating">
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-						</div>
-						<span class="rating-votes">(365)</span>
-					</div>
-				</div>
-				<!-- block location -->
-				
-				<div class="post location post--home">
-					<figure class="post-img location__post-img">
-						<i class="post-icon icon-home location__post-icon"></i>
-						<span class="button--rounded price">
-							$2,990
-						</span>
-					</figure>
-					<div class="panel location__panel">
-						<h5 class="location__title">
-							2 bedroom house for rent in Dubai
-						</h5>
-						<h4 class="location__host">
-							Vision Agency
-						</h4>
-						<div class="rating location__rating">
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star-o"></span>
-						</div>
-						<span class="rating-votes">(365)</span>
-					</div>
-				</div>
-				
-				<div class="post location post--music">
-					<figure class="post-img location__post-img">
-						<i class="post-icon icon-music location__post-icon"></i>
-					</figure>
-					<div class="panel location__panel">
-						<h5 class="location__title">
-							Beach party festival 2014
-						</h5>
-						<h4 class="location__host">
-							Long beach
-						</h4>
-						<div class="rating location__rating">
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-						</div>
-						<span class="rating-votes">(365)</span>
-					</div>
-				</div>
-				<!-- block review -->
-				
-				<div class="post review post--bus">
-					<figure class="post-img review__post-img">
-						<i class="post-icon icon-bus review__post-icon"></i>
-						<div class="review__title-group">
-							<h4 class="review__host">
-								Long beach
+				<div class="col col-lr-4">
+					<div class="post post--home location">
+						<figure class="post-img location__post-img">
+							<div class="post-img__hover">
+								<button class="button button--rounded hover__button">
+									Show more
+								</button>
+								<div class="hover__rating">
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+								</div>
+								<i class="icon-comments hover__icon"></i>
+							</div>
+							<i class="post-icon icon-home location__post-icon"></i>
+							<span class="button--rounded price">
+								$2,990
+							</span>
+						</figure>
+						<div class="panel location__panel">
+							<h5 class="location__title">
+								2 bedroom house for rent in Dubai
+							</h5>
+							<h4 class="location__host">
+								Vision Agency
 							</h4>
-							<div class="rating review__rating">
+							<div class="rating location__rating">
 								<span class="icon-star"></span>
 								<span class="icon-star"></span>
 								<span class="icon-star"></span>
 								<span class="icon-star"></span>
 								<span class="icon-star-o"></span>
 							</div>
-							<span class="rating-votes">(1165)</span>
-						</div>	
-					</figure>
-					<div class="panel review__panel">
-						<figure class="user-img review__user-img">
-							
-						</figure>
-						<div class="rating user-rating review__user-rating">
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star-o"></span>
-							<span class="icon-star-o"></span>
+							<span class="rating-votes">(365)</span>
 						</div>
-						<h5 class="user-name">
-							Lucy-P
-						</h5>
-						<p class="user-comment">
-							“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci ornare. Duis mattis sagittis fringilla.” 
-							<a href="#" class="user-comment__more"><b>...read more</b></a>
-						</p>
 					</div>
 				</div>
-				<!-- block review -->
 				
-				<div class="post review post--bus">
-					<figure class="post-img review__post-img">
-						<i class="post-icon icon-bus review__post-icon"></i>
-						<div class="review__title-group">
-							<h4 class="review__host">
+				<div class="col col-lr-4">
+					<div class="post post--music location">
+						<figure class="post-img location__post-img">
+							<div class="post-img__hover">
+								<button class="button button--rounded hover__button">
+									Show more
+								</button>
+								<div class="hover__rating">
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+								</div>
+								<i class="icon-comments hover__icon"></i>
+							</div>
+							<i class="post-icon icon-music location__post-icon"></i>
+						</figure>
+						<div class="panel location__panel">
+							<h5 class="location__title">
+								Beach party festival 2014
+							</h5>
+							<h4 class="location__host">
 								Long beach
 							</h4>
-							<div class="rating review__rating">
+							<div class="rating location__rating">
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+							</div>
+							<span class="rating-votes">(365)</span>
+						</div>
+					</div>
+				</div>
+				<!-- block location -->
+				<div class="col col-lr-4">
+					<div class="post post--home location">
+						<figure class="post-img location__post-img">
+							<div class="post-img__hover">
+								<button class="button button--rounded hover__button">
+									Show more
+								</button>
+								<div class="hover__rating">
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+								</div>
+								<i class="icon-comments hover__icon"></i>
+							</div>
+							<i class="post-icon icon-home location__post-icon"></i>
+							<span class="button--rounded price">
+								$2,990
+							</span>
+						</figure>
+						<div class="panel location__panel">
+							<h5 class="location__title">
+								2 bedroom house for rent in Dubai
+							</h5>
+							<h4 class="location__host">
+								Vision Agency
+							</h4>
+							<div class="rating location__rating">
 								<span class="icon-star"></span>
 								<span class="icon-star"></span>
 								<span class="icon-star"></span>
 								<span class="icon-star"></span>
 								<span class="icon-star-o"></span>
 							</div>
-							<span class="rating-votes">(1165)</span>
-						</div>	
-					</figure>
-					<div class="panel review__panel">
-						<figure class="user-img review__user-img">
-							
+							<span class="rating-votes">(365)</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col col-lr-4">
+					<div class="post post--music location">
+						<figure class="post-img location__post-img">
+							<div class="post-img__hover">
+								<button class="button button--rounded hover__button">
+									Show more
+								</button>
+								<div class="hover__rating">
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+								</div>
+								<i class="icon-comments hover__icon"></i>
+							</div>
+							<i class="post-icon icon-music location__post-icon"></i>
 						</figure>
-						<div class="rating user-rating review__user-rating">
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star-o"></span>
-							<span class="icon-star-o"></span>
+						<div class="panel location__panel">
+							<h5 class="location__title">
+								Beach party festival 2014
+							</h5>
+							<h4 class="location__host">
+								Long beach
+							</h4>
+							<div class="rating location__rating">
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+							</div>
+							<span class="rating-votes">(365)</span>
 						</div>
-						<h5 class="user-name">
-							Lucy-P
-						</h5>
-						<p class="user-comment">
-							“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci ornare. Duis mattis sagittis fringilla.” 
-							<a href="#" class="user-comment__more"><b>...read more</b></a>
-						</p>
-					</div>
-				</div>
-				<!-- block location -->
-				
-				<div class="post location post--home">
-					<figure class="post-img location__post-img">
-						<i class="post-icon icon-home location__post-icon"></i>
-						<span class="button--rounded price">
-							$2,990
-						</span>
-					</figure>
-					<div class="panel location__panel">
-						<h5 class="location__title">
-							2 bedroom house for rent in Dubai
-						</h5>
-						<h4 class="location__host">
-							Vision Agency
-						</h4>
-						<div class="rating location__rating">
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star-o"></span>
-						</div>
-						<span class="rating-votes">(365)</span>
-					</div>
-				</div>
-				
-				<div class="post location post--music">
-					<figure class="post-img location__post-img">
-						<i class="post-icon icon-music location__post-icon"></i>
-					</figure>
-					<div class="panel location__panel">
-						<h5 class="location__title">
-							Beach party festival 2014
-						</h5>
-						<h4 class="location__host">
-							Long beach
-						</h4>
-						<div class="rating location__rating">
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-						</div>
-						<span class="rating-votes">(365)</span>
-					</div>
-				</div>
-				<!-- block location -->
-				
-				<div class="post location post--home">
-					<figure class="post-img location__post-img">
-						<i class="post-icon icon-home location__post-icon"></i>
-						<span class="button--rounded price">
-							$2,990
-						</span>
-					</figure>
-					<div class="panel location__panel">
-						<h5 class="location__title">
-							2 bedroom house for rent in Dubai
-						</h5>
-						<h4 class="location__host">
-							Vision Agency
-						</h4>
-						<div class="rating location__rating">
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star-o"></span>
-						</div>
-						<span class="rating-votes">(365)</span>
-					</div>
-				</div>
-				
-				<div class="post location post--music">
-					<figure class="post-img location__post-img">
-						<i class="post-icon icon-music location__post-icon"></i>
-					</figure>
-					<div class="panel location__panel">
-						<h5 class="location__title">
-							Beach party festival 2014
-						</h5>
-						<h4 class="location__host">
-							Long beach
-						</h4>
-						<div class="rating location__rating">
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-						</div>
-						<span class="rating-votes">(365)</span>
 					</div>
 				</div>
 				<!-- block review -->
-				
-				<div class="post review post--bus">
-					<figure class="post-img review__post-img">
-						<i class="post-icon icon-bus review__post-icon"></i>
-						<div class="review__title-group">
-							<h4 class="review__host">
-								Long beach
+				<div class="col col-lr-2">
+					<div class="post review post--bus">
+						<figure class="post-img review__post-img">
+							<i class="post-icon icon-bus review__post-icon"></i>
+							<div class="review__title-group">
+								<h4 class="review__host">
+									Vision agency
+								</h4>
+								<div class="rating review__rating">
+									<span class="icon-star"></span>
+									<span class="icon-star"></span>
+									<span class="icon-star"></span>
+									<span class="icon-star"></span>
+									<span class="icon-star-o"></span>
+								</div>
+								<span class="rating-votes">(1165)</span>
+							</div>	
+						</figure>
+						<div class="panel review__panel">
+							<figure class="user-img review__user-img">
+								
+							</figure>
+							<div class="rating user-rating review__user-rating">
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star-o"></span>
+								<span class="icon-star-o"></span>
+							</div>
+							<h5 class="user-name">
+								Lucy-P
+							</h5>
+							<p class="user-comment">
+								“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci ornare. Duis mattis sagittis fringilla.” 
+								<a href="#" class="link"><b>...read more</b></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- block review -->
+				<div class="col col-lr-2">
+					<div class="post review post--bus">
+						<figure class="post-img review__post-img">
+							<i class="post-icon icon-bus review__post-icon"></i>
+							<div class="review__title-group">
+								<h4 class="review__host">
+									Vision agency
+								</h4>
+								<div class="rating review__rating">
+									<span class="icon-star"></span>
+									<span class="icon-star"></span>
+									<span class="icon-star"></span>
+									<span class="icon-star"></span>
+									<span class="icon-star-o"></span>
+								</div>
+								<span class="rating-votes">(1165)</span>
+							</div>	
+						</figure>
+						<div class="panel review__panel">
+							<figure class="user-img review__user-img">
+								
+							</figure>
+							<div class="rating user-rating review__user-rating">
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star-o"></span>
+								<span class="icon-star-o"></span>
+							</div>
+							<h5 class="user-name">
+								Lucy-P
+							</h5>
+							<p class="user-comment">
+								“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci ornare. Duis mattis sagittis fringilla.” 
+								<a href="#" class="link"><b>...read more</b></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- block location -->
+				<div class="col col-lr-4">
+					<div class="post post--home location">
+						<figure class="post-img location__post-img">
+							<div class="post-img__hover">
+								<button class="button button--rounded hover__button">
+									Show more
+								</button>
+								<div class="hover__rating">
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+								</div>
+								<i class="icon-comments hover__icon"></i>
+							</div>
+							<i class="post-icon icon-home location__post-icon"></i>
+							<span class="button--rounded price">
+								$2,990
+							</span>
+						</figure>
+						<div class="panel location__panel">
+							<h5 class="location__title">
+								2 bedroom house for rent in Dubai
+							</h5>
+							<h4 class="location__host">
+								Vision Agency
 							</h4>
-							<div class="rating review__rating">
+							<div class="rating location__rating">
 								<span class="icon-star"></span>
 								<span class="icon-star"></span>
 								<span class="icon-star"></span>
 								<span class="icon-star"></span>
 								<span class="icon-star-o"></span>
 							</div>
-							<span class="rating-votes">(1165)</span>
-						</div>	
-					</figure>
-					<div class="panel review__panel">
-						<figure class="user-img review__user-img">
-							
-						</figure>
-						<div class="rating user-rating review__user-rating">
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star-o"></span>
-							<span class="icon-star-o"></span>
+							<span class="rating-votes">(365)</span>
 						</div>
-						<h5 class="user-name">
-							Lucy-P
-						</h5>
-						<p class="user-comment">
-							“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci ornare. Duis mattis sagittis fringilla.” 
-							<a href="#" class="user-comment__more"><b>...read more</b></a>
-						</p>
+					</div>
+				</div>
+				
+				<div class="col col-lr-4">
+					<div class="post post--music location">
+						<figure class="post-img location__post-img">
+							<div class="post-img__hover">
+								<button class="button button--rounded hover__button">
+									Show more
+								</button>
+								<div class="hover__rating">
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+								</div>
+								<i class="icon-comments hover__icon"></i>
+							</div>
+							<i class="post-icon icon-music location__post-icon"></i>
+						</figure>
+						<div class="panel location__panel">
+							<h5 class="location__title">
+								Beach party festival 2014
+							</h5>
+							<h4 class="location__host">
+								Long beach
+							</h4>
+							<div class="rating location__rating">
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+							</div>
+							<span class="rating-votes">(365)</span>
+						</div>
 					</div>
 				</div>
 				<!-- block location -->
-				
-				<div class="post location post--home">
-					<figure class="post-img location__post-img">
-						<i class="post-icon icon-home location__post-icon"></i>
-						<span class="button--rounded price">
-							$2,990
-						</span>
-					</figure>
-					<div class="panel location__panel">
-						<h5 class="location__title">
-							2 bedroom house for rent in Dubai
-						</h5>
-						<h4 class="location__host">
-							Vision Agency
-						</h4>
-						<div class="rating location__rating">
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star-o"></span>
+				<div class="col col-lr-4">
+					<div class="post post--home location">
+						<figure class="post-img location__post-img">
+							<div class="post-img__hover">
+								<button class="button button--rounded hover__button">
+									Show more
+								</button>
+								<div class="hover__rating">
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+								</div>
+								<i class="icon-comments hover__icon"></i>
+							</div>
+							<i class="post-icon icon-home location__post-icon"></i>
+							<span class="button--rounded price">
+								$2,990
+							</span>
+						</figure>
+						<div class="panel location__panel">
+							<h5 class="location__title">
+								2 bedroom house for rent in Dubai
+							</h5>
+							<h4 class="location__host">
+								Vision Agency
+							</h4>
+							<div class="rating location__rating">
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star-o"></span>
+							</div>
+							<span class="rating-votes">(365)</span>
 						</div>
-						<span class="rating-votes">(365)</span>
 					</div>
 				</div>
 				
-				<div class="post location post--music">
-					<figure class="post-img location__post-img">
-						<i class="post-icon icon-music location__post-icon"></i>
-					</figure>
-					<div class="panel location__panel">
-						<h5 class="location__title">
-							Beach party festival 2014
-						</h5>
-						<h4 class="location__host">
-							Long beach
-						</h4>
-						<div class="rating location__rating">
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
-							<span class="icon-star"></span>
+				<div class="col col-lr-4">
+					<div class="post post--music location">
+						<figure class="post-img location__post-img">
+							<div class="post-img__hover">
+								<button class="button button--rounded hover__button">
+									Show more
+								</button>
+								<div class="hover__rating">
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+								</div>
+								<i class="icon-comments hover__icon"></i>
+							</div>
+							<i class="post-icon icon-music location__post-icon"></i>
+						</figure>
+						<div class="panel location__panel">
+							<h5 class="location__title">
+								Beach party festival 2014
+							</h5>
+							<h4 class="location__host">
+								Long beach
+							</h4>
+							<div class="rating location__rating">
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+							</div>
+							<span class="rating-votes">(365)</span>
 						</div>
-						<span class="rating-votes">(365)</span>
 					</div>
 				</div>
-				<a href="#" class="link link-more">
+				<!-- block review -->
+				<div class="col col-lr-2">
+					<div class="post review post--bus">
+						<figure class="post-img review__post-img">
+							<i class="post-icon icon-bus review__post-icon"></i>
+							<div class="review__title-group">
+								<h4 class="review__host">
+									Vision agency
+								</h4>
+								<div class="rating review__rating">
+									<span class="icon-star"></span>
+									<span class="icon-star"></span>
+									<span class="icon-star"></span>
+									<span class="icon-star"></span>
+									<span class="icon-star-o"></span>
+								</div>
+								<span class="rating-votes">(1165)</span>
+							</div>	
+						</figure>
+						<div class="panel review__panel">
+							<figure class="user-img review__user-img">
+								
+							</figure>
+							<div class="rating user-rating review__user-rating">
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star-o"></span>
+								<span class="icon-star-o"></span>
+							</div>
+							<h5 class="user-name">
+								Lucy-P
+							</h5>
+							<p class="user-comment">
+								“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci ornare. Duis mattis sagittis fringilla.” 
+								<a href="#" class="link"><b>...read more</b></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- block location -->
+				<div class="col col-lr-4">
+					<div class="post post--home location">
+						<figure class="post-img location__post-img">
+							<div class="post-img__hover">
+								<button class="button button--rounded hover__button">
+									Show more
+								</button>
+								<div class="hover__rating">
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+								</div>
+								<i class="icon-comments hover__icon"></i>
+							</div>
+							<i class="post-icon icon-home location__post-icon"></i>
+							<span class="button--rounded price">
+								$2,990
+							</span>
+						</figure>
+						<div class="panel location__panel">
+							<h5 class="location__title">
+								2 bedroom house for rent in Dubai
+							</h5>
+							<h4 class="location__host">
+								Vision Agency
+							</h4>
+							<div class="rating location__rating">
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star-o"></span>
+							</div>
+							<span class="rating-votes">(365)</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col col-lr-4">
+					<div class="post post--music location">
+						<figure class="post-img location__post-img">
+							<div class="post-img__hover">
+								<button class="button button--rounded hover__button">
+									Show more
+								</button>
+								<div class="hover__rating">
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+									<span class="icon-star-o"></span>
+								</div>
+								<i class="icon-comments hover__icon"></i>
+							</div>
+							<i class="post-icon icon-music location__post-icon"></i>
+						</figure>
+						<div class="panel location__panel">
+							<h5 class="location__title">
+								Beach party festival 2014
+							</h5>
+							<h4 class="location__host">
+								Long beach
+							</h4>
+							<div class="rating location__rating">
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+								<span class="icon-star"></span>
+							</div>
+							<span class="rating-votes">(365)</span>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="link link--more">
 					Load more
 				</a>
 			</div>
@@ -530,7 +678,7 @@
 				</p>
 			</div>
 		</div>
-	</div>
+	</section>
 	<footer class="footer">
 		<div class="container">
 			<form name="subscribe-form" class="form subscribe-form" action="" method="get">

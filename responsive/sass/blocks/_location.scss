@@ -1,152 +1,10 @@
-// Post
-
-.post
-{
-    font-size: 0;
-
-    display: inline-block;
-    overflow: hidden;
-
-    box-sizing: border-box;
-    // padding: 18px;
-    margin: 2%;
-
-    vertical-align: top;
-
-    border-radius: 2px 3px 3px 2px;
-    background-color: $white;
-    box-shadow: 0 1px 0 #e2dee0;
-    &:hover
-    {
-        transition: all 5s;
-        .post-img:after
-        {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-
-            content: '';
-
-            opacity: .7;
-            background-color: $purple;
-            cursor: pointer;
-        }
-    }
-    &--home
-    {
-        .post-img
-        {
-            border-bottom: 3px solid $green;
-        }
-        .location__post-img
-        {
-            background-image: url(../images/appart-bg-1.png);
-        }
-        .location__host
-        {
-            color: $green;
-        }
-        &:hover
-        {
-            .post-img:after
-            {
-                background-color: $green;
-            }
-        }
-    }
-    &--music
-    {
-        .post-img
-        {
-            border-bottom: 3px solid $orange;
-        }
-        .location__post-img
-        {
-            background-image: url(../images/appart-bg-2.png);
-        }
-        .location__host
-        {
-            color: $orange;
-        }
-        &:hover
-        {
-            .post-img:after
-            {
-                background-color: $orange;
-            }
-        }
-    }
-    &--bus
-    {
-        .post-img
-        {
-            border-bottom: 3px solid $purple;
-        }
-        .location__post-img
-        {
-            background-image: url(../images/appart-bg-2.png);
-        }
-        .location__host
-        {
-            color: $purple;
-        }
-        &:hover
-        {
-            .post-img:after
-            {
-                background-color: $purple;
-            }
-        }
-    }
-}
-
-.post-img
-{
-    position: relative;
-
-    height: 0;
-    padding-top: 67%;
-
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: cover;
-}
-
-
-
-.rating
-{
-    // unicode-bidi: bidi-override;
-    // direction: rtl;
-    // text-align: left;
-    display: inline-block;
-    & > *
-    {
-        font-size: 12px;
-
-        position: relative;
-
-        display: inline-block;
-
-        color: $orange;
-        // &:hover {
-        //     &:before, 
-        //     ~ .icon-star-o:before {
-        //         content: "\f005";
-        //     }
-        // }
-    }
-}
-
 // Location
 
 .location
 {
     font: $base-font;
 
-    width: 21%;
+    // width: 25%;
 }
 
 .price
@@ -154,10 +12,10 @@
     font-size: 12px;
 
     position: absolute;
-    top: 7px;
+    top: 8px;
     right: 7px;
 
-    padding: 7px 12px;
+    padding: 6px 12px 3px;
 
     color: $white;
     background-color: $green;
@@ -170,7 +28,7 @@
 
 .location__panel
 {
-    padding: 30px 15px 14px;
+    padding: 32px 15px 7px;
 }
 
 .location__title
@@ -180,7 +38,7 @@
     overflow: hidden;
 
     min-height: 38px;
-    margin-bottom: 17px;
+    margin-bottom: 11px;
 
     color: $font;
 }
@@ -197,207 +55,4 @@
 .rating-votes
 {
     color: $font;
-}
-
-// Review
-
-.review
-{
-    width: 46%;
-}
-
-.review__post-img
-{
-    padding-top: 26%;
-
-    background-image: url('../images/review-bg-2.png');
-}
-.review__title-group
-{
-    position: absolute;
-    bottom: 6px;
-    left: 97px;
-    & > *
-    {
-        display: inline-block;
-
-        margin-right: 8px;
-
-        color: $white;
-    }
-}
-.review__host
-{
-    font-size: 18px;
-}
-
-.review__rating
-{
-    display: inline-block;
-}
-.rating-votes
-{
-    font-size: 12px;
-}
-.review__panel
-{
-    position: relative;
-
-    padding: 15px 17px 17px 98px;
-}
-.user-img
-{
-    position: absolute;
-    top: 48px;
-    left: 20px;
-
-    width: 60px;
-    height: 60px;
-
-    border-radius: 50%;
-    background-image: url('../images/user-img.png');
-    background-position: 50%;
-    background-size: cover;
-}
-
-
-.review__user-rating
-{
-    display: block;
-
-    text-align: left;
-    & > *
-    {
-        font-size: 18px;
-    }
-}
-.user-name
-{
-    font-size: 18px;
-
-    margin-top: 13px;
-    margin-bottom: 10px;
-
-    text-align: left;
-
-    color: $grey-darker;
-}
-.user-comment,
-a.user-comment__more
-{
-    font: $base-font;
-
-    text-align: justify;
-
-    color: $grey-darker;
-    // margin-left: 98px;
-}
-
-// Link
-
-
-.link-more
-{
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 1;
-
-    display: inline-block;
-
-    margin-top: 25px;
-
-    color: $font;
-    border-bottom: 1px solid $grey-lighter;
-    &:after
-    {
-        font-family: 'IcoMoon';
-        font-size: 14px;
-
-        content: '\e905';
-
-        border: none;
-    }
-}
-
-// Offer
-
-.offer
-{
-    font-size: 0;
-
-    padding: 88px 80px 140px;
-}
-.offer__title
-{
-    font-size: 22px;
-
-    margin-bottom: 10px;
-
-    color: $font;
-}
-.offer__caption
-{
-    font-size: 16px;
-
-    margin-bottom: 69px;
-
-    color: $font-light;
-}
-.offer__icons
-{
-    margin-bottom: 36px;
-}
-
-
-
-
-
-
-.offer__title--green
-{
-    margin-bottom: 44px;
-
-    color: $green;
-}
-.offer__text
-{
-    font: $base-font;
-    line-height: 2;
-
-    position: relative;
-
-    display: inline-block;
-
-    box-sizing: border-box;
-    width: 50%;
-    padding-right: 25px;
-    padding-left: 126px;
-
-    text-align: justify;
-    &:before
-    {
-        font-family: 'IcoMoon';
-        font-size: 30px;
-        line-height: 60px;
-
-        position: absolute;
-        left: 14px;
-
-        width: 60px;
-        height: 60px;
-
-        text-align: center;
-
-        color: $white;
-        border-radius: 50px;
-        background-color: $green;
-    }
-    &--flash:before
-    {
-        content: '\f06c';
-    }
-    &--leaf:before
-    {
-        content: '\f0e7';
-    }
 }

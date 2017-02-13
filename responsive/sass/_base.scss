@@ -19,8 +19,23 @@ body {
 .main {
 	background-color: $grey-lightest;
 }
-.main-aricles {
+.main__posts {
 	font-size: 0;
-	padding: 46px 0 35px;
+	padding: 30px 0 33px;
 	border-bottom: 1px solid $grey-lighter;
+	// display: flex;
+	//flex-wrap: wrap;
+	//align-items: stretch;
+	// Change the mark-up to use flexbox layout!
+}
+.col {
+	padding: 16px 18px;
+	box-sizing: border-box;
+	display: inline-block;
+}
+.col-lr-4 {
+	width: 25%;
+}
+.col-lr-2 {
+	width: 50%;
 }

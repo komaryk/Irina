@@ -2,7 +2,7 @@
 {
     position: relative;
 
-    padding: 58px 0 40px;
+    padding: 51px 0 40px;
 
     color: $white;
     background-image: url('../images/hero-bg.png');
@@ -43,61 +43,36 @@
 {
     text-align: center;
 }
-.search-title
+.search__title
 {
     font-size: 30px;
 
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 
     text-shadow: 0 1px 1px rgba(0, 0, 1, .15);
 }
-// .search-category
-// {
-//     font-family: 'Gotham';
-//     font-size: 18px;
-//     line-height: 50px;
 
-//     display: inline-block;
-
-//     box-sizing: border-box;
-//     padding: 0 20px;
-
-//     text-align: left;
-
-//     color: $white;
-//     border: 1px solid rgba(255, 255, 255, .2);
-//     border-radius: 30px;
-//     &::-webkit-input-placeholder
-//     {
-//         color: $white;
-//     }
-//     &:-ms-input-placeholder
-//     {
-//         color: $white;
-//     }
-// }
-.search-category__city,
-.search-category__type
+.search__category
 {
-    width: 24%;
+    width: 22.5%;
 }
 
-.search-category__city
+.search__category--city
 {
-    left: 25%;
+    left: 26%;
 }
 
-.search-category__type
+.search__category--type
 {
-    right: 25%;
+    right: 26%;
 }
 .city,
 .type
 {
     display: none;
 }
-.city__selected,
-.type__selected
+.city--selected,
+.type--selected
 {
     display: block;
     &:after
@@ -109,14 +84,4 @@
 
         content: '\f078';
     }
-}
-
-.search-input
-{
-    display: block;
-
-    width: 50%;
-    margin: 105px auto 28px;
-
-    background-color: rgba(255, 255, 255, .1);
 }

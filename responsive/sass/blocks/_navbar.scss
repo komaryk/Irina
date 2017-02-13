@@ -1,7 +1,7 @@
 
 .navbar
 {
-    padding: 10px 0;
+    padding: 3px 0; //change!
 
     border-bottom: 1px solid $grey-lighter;
     .container
@@ -31,7 +31,9 @@
 
     display: inline-block;
 
-    margin-right: 20px;
+    margin-right: 17px;
+    line-height: 45px;
+    padding-top: 3px;
 }
 .popular-item__selected a
 {
@@ -41,7 +43,7 @@
 {
     text-align: right;
     .search-locations {
-        left: 33.33%;
+        left: 36.63%;
     }
     & > *
     {
@@ -63,7 +65,6 @@
 .navbar__location
 {
     display: none;
-    line-height: 1.4;
 }
 .location__selected
 {
@@ -100,12 +101,14 @@
     }
 }
 .filter
-{
+{   
+    text-align: right;
     & > *
     {
         display: inline-block;
 
         vertical-align: middle;
+        text-align: center;
     }
 }
 .filter-title
