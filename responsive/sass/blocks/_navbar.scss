@@ -39,6 +39,10 @@
 }
 .navbar--locations
 {
+    text-align: right;
+    .search-locations {
+        left: 33.33%;
+    }
     & > *
     {
         font-size: 12px;
@@ -59,6 +63,7 @@
 .navbar__location
 {
     display: none;
+    line-height: 1.4;
 }
 .location__selected
 {

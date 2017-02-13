@@ -79,11 +79,18 @@
 .search-category__city,
 .search-category__type
 {
-    width: 25%;
-
-    background-color: rgba(255, 255, 255, .1);
+    width: 24%;
 }
 
+.search-category__city
+{
+    left: 25%;
+}
+
+.search-category__type
+{
+    right: 25%;
+}
 .city,
 .type
 {
@@ -109,7 +116,7 @@
     display: block;
 
     width: 50%;
-    margin: 21px auto 28px;
+    margin: 105px auto 28px;
 
     background-color: rgba(255, 255, 255, .1);
 }

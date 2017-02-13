@@ -236,4 +236,26 @@
     {
         color: $white;
     }
+    &--open {
+      & > .city,
+      .type {
+        display: block;
+      }
+    }
+}
+
+// Select
+
+.select {
+  position: absolute;
+  
+  &--open {
+    background-color: #110c04;
+    opacity: 0.8;
+    .city,
+    .type,
+    .navbar__location {
+      display: block;
+    }
+  }
 }
