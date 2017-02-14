@@ -2,12 +2,21 @@
 {
     position: relative;
 
-    padding: 56px 0;
+    padding: 56px 10px 24px;
 
     color: $white;
     background-image: url('../images/hero-bg.png');
     background-position: 50%;
     background-size: cover;
+    @include tablet {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    @include desktop {
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 56px;
+    }
     &:before
     {
         position: absolute;
@@ -28,14 +37,10 @@
     }
 }
 
-
-
-
 .subscribe-form
 {
     padding-bottom: 55px;
 
-    border-bottom: 1px solid #635a51;
 }
 .subscribe__title
 {
@@ -48,29 +53,42 @@
 {
     line-height: 60px;
 
-    // padding-right: 1px;
-    
-    width: 50%;
     position: relative;
+    // padding-right: 1px;
+
+    width: 100%;
+    max-width: 550px;
+    @include tablet {
+        width: 50%;
+    }
 }
 .subscribe__label
 {
     position: relative;
 
-    padding-left: 40px;
+    
     i
     {
         margin-right: 30px;
+    }  
+}
+
+@media screen and (min-width: 400px) {
+    .subscribe__label {
+        padding-left: 40px;
+        &:before
+        {
+            font-family: 'IcoMoon';
+            font-size: 18px;
+
+            position: absolute;
+            left: 0;
+
+            content: '\f003';
+        }
     }
-    &:before
-    {
-        font-family: 'IcoMoon';
-        font-size: 18px;
-
-        position: absolute;
-        left: 0;
-
-        content: '\f003';
+    .subscribe__input {
+        width: 57%;
     }
 }
 
@@ -80,6 +98,9 @@
     font-weight: 300;
 
     color: $white;
+    @include desktop {
+        width: 67%;
+    }
     &::-webkit-input-placeholder
     {
         color: $white;
@@ -90,36 +111,47 @@
     }
 }
 
-
-
-
 .footer__info
 {
     font-size: 0;
 
     padding-top: 41px;
+    border-top: 1px solid #635a51;
 }
 .footer__block
 {
-    font: $base-font;
-
     display: inline-block;
-
+    font: $base-font;
     width: 33.33%;
-
     text-align: left;
     vertical-align: top;
+
+    @include mobile {
+        
+        
+        display: none;
+        &.footer__block--social {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+        }
+    }
 }
 .footer__title
 {
     font-size: 16px;
     line-height: 1;
 
-    display: inline-block;
+    display: none;
 
     margin-bottom: 25px;
 
     border-bottom: 1px solid #635a51;
+    @include tablet {
+        display: inline-block;
+    }
+    
 }
 .footer__list
 {
@@ -127,18 +159,27 @@
 }
 .footer__social
 {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    @include desktop {
+        margin-bottom: 60px;
+    }
     li
     {
         display: inline-block;
 
-        margin-right: 20px;
+        margin: 0 10px;
+        @include tablet {
+            margin: 0 20px 0 0;
+        }
     }
     a
     {
         font-size: 30px;
-        &:hover {
-            color: $brand-primary;
+        @include desktop {
+            &:hover
+            {
+                color: $brand-primary;
+            }
         }
     }
 }

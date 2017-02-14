@@ -35,7 +35,6 @@
     }
     & > *
     {
-        position: relative;
         z-index: 2;
     }
 }
@@ -51,20 +50,47 @@
 
     text-shadow: 0 1px 1px rgba(0, 0, 1, .15);
 }
-
+.search-group {
+    position: relative;
+    padding-top: 148px;
+    @include tablet {
+        padding-top: 74px;
+    }
+}
 .search__category
 {
-    width: 22.5%;
+    width: 96%;
+    top: 0;
+    @include tablet {
+        width: 46%;
+        top: 0;
+    }
+    @include desktop {
+        width: 22.5%;
+    }
+    
 }
-
 .search__category--city
 {
-    left: 26%;
+    left: 2%;
+    @include tablet {
+        left: 2%;
+    }
+    @include desktop {
+        left: 26%;
+    }
 }
-
 .search__category--type
 {
-    right: 26%;
+    right: 2%;
+    top: 74px;
+    @include tablet {
+        right: 2%;
+        top: 0;
+    }
+    @include desktop {
+        right: 26%;
+    }
 }
 .city,
 .type
@@ -83,5 +109,24 @@
         float: right;
 
         content: '\f078';
+    }
+}
+
+.search__input
+{
+    line-height: 55px;
+
+    display: block;
+
+    width: 96%;
+    margin: 0 auto 28px;
+
+    background-color: rgba(255, 255, 255, .1);
+    @include tablet {
+        width: 96%;
+        margin: 0 auto 28px;
+    }
+    @include desktop {
+        width: 48%;
     }
 }

@@ -8,33 +8,36 @@
     overflow: hidden;
 
     box-sizing: border-box;
+    width: 100%;
     // margin: 2%;
 
     vertical-align: top;
 
     border-radius: 2px 3px 3px 2px;
     box-shadow: 0 1px 0 #e2dee0;
-    &:hover
-    {
-        .post-img:after
+    @include desktop {
+        &:hover
         {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
+            .post-img:after
+            {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
 
-            content: '';
-            cursor: pointer;
+                content: '';
+                cursor: pointer;
 
-            opacity: .7;
-            background-color: $purple;
-        }
-        .post-img__hover
-        {
-            display: block;
+                opacity: .7;
+                background-color: $purple;
+            }
+            .post-img__hover
+            {
+                display: block;
 
-            animation: fadeInDown .75s forwards;
+                animation: fadeInDown .75s forwards;
+            }
         }
     }
     &--home

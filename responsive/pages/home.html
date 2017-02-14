@@ -42,38 +42,40 @@
 			<h2 class="search__title">
 				What are you looking for?
 			</h2>
-			<ul class="input select search__category search__category--city">
-				<li class="city city--selected">
-					Dubai
-				</li>
-				<li class="city">
-					Kyiv
-				</li>
-				<li class="city">
-					Kyiv
-				</li>
-				<li class="city">
-					Kyiv
-				</li>
-			</ul>
-			<ul class="input select search__category search__category--type">
-				<li class="type type--selected">
-					Education
-				</li>
-				<li class="type">
-					Entertainment
-				</li>
-				<li class="type">
-					Reality
-				</li>
-				<li class="type">
-					Mobility
-				</li>
-			</ul>
-			<input type="text" class="input search__input" placeholder="Keyword, name, date, ...">
-			<button class="button--primary search__button">
-				Search
-			</button>
+			<div class="search-group">
+				<ul class="input select search__category search__category--city">
+					<li class="city city--selected">
+						Dubai
+					</li>
+					<li class="city">
+						Kyiv
+					</li>
+					<li class="city">
+						Kyiv
+					</li>
+					<li class="city">
+						Kyiv
+					</li>
+				</ul>
+				<ul class="input select search__category search__category--type">
+					<li class="type type--selected">
+						Education
+					</li>
+					<li class="type">
+						Entertainment
+					</li>
+					<li class="type">
+						Reality
+					</li>
+					<li class="type">
+						Mobility
+					</li>
+				</ul>
+				<input type="text" class="input search__input" placeholder="Keyword, name, date, ...">
+				<button class="button--primary search__button">
+					Search
+				</button>
+			</div>
 		</div>
 	</section>
 	<div class="nav navbar">
@@ -747,7 +749,7 @@
 	                    </li>
 	                </ul>
 	            </div>
-	            <div class="footer__block">
+	            <div class="footer__block footer__block--social">
 	                <h5 class="footer__title">
 	                    Follow us
 	                </h5>
@@ -774,30 +776,7 @@
 	</footer>
 </div>
 <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-<script>
-$(document).ready(function(){
-	// Open and close select box on click
-    $(".select").on("click", function(){
-        $(this).toggleClass("select--open");
-    });
-
-    //Close select box on click outside of the box
- //    $(document).on('click', function(event) {
-	//     if (!$(event.target).is('.select--open')) {
-	//         $('.select').toggleClass('select--open');
-	//     }
-	// });
-	$(document).mouseup(function (e)
-	{
-	    var container = $(".select");
-
-	    if (!container.is(e.target) // if the target of the click isn't the container
-	        && container.hasClass('select--open') == true) // and is open
-	    {
-	        $(container).removeClass('select--open');
-	    }
-	});
-});
+<script src="../js/main.js">
 </script>
 </body>
 </html>

@@ -14,16 +14,21 @@
 {
     font-weight: 500;
 
+    transition: all .3s;
+
     color: $white;
     background-color: $brand-primary;
     box-shadow: 0 2px 0 #c1412e;
-    transition: all 0.3s;
-    
-    &:hover {
-        background-color: #c83d1d; // change --> this is boring
-        transform: scale(1.05);
-    }
 
+    @include desktop
+    {
+        &:hover
+        {
+            transform: scale(1.05);
+
+            background-color: #c83d1d; // change --> this is boring
+        }
+    }
     @extend %button--rounded;
 }
 .search__button
@@ -32,7 +37,8 @@
 
     padding: 20px 32px 18px;
 }
-.button--map {
+.button--map
+{
     margin-left: 137px;
 }
 .subscribe__button
@@ -65,71 +71,93 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-chevron-up:before {
-  content: "\e907";
+.icon-chevron-up:before
+{
+    content: '\e907';
 }
-.icon-bars:before {
-  content: "\e906";
+.icon-bars:before
+{
+    content: '\e906';
 }
-.icon-arrow-right:before {
-  content: "\e905";
+.icon-arrow-right:before
+{
+    content: '\e905';
 }
-.icon-envelope-o:before {
-  content: "\f003";
+.icon-envelope-o:before
+{
+    content: '\f003';
 }
-.icon-star:before {
-  content: "\f005";
+.icon-star:before
+{
+    content: '\f005';
 }
-.icon-star-o:before {
-  content: "\f006";
+.icon-star-o:before
+{
+    content: '\f006';
 }
-.icon-map-marker:before {
-  content: "\f041";
+.icon-map-marker:before
+{
+    content: '\f041';
 }
-.icon-leaf:before {
-  content: "\f06c";
+.icon-leaf:before
+{
+    content: '\f06c';
 }
-.icon-chevron-down:before {
-  content: "\f078";
+.icon-chevron-down:before
+{
+    content: '\f078';
 }
-.icon-twitter:before {
-  content: "\f099";
+.icon-twitter:before
+{
+    content: '\f099';
 }
-.icon-facebook:before {
-  content: "\f09a";
+.icon-facebook:before
+{
+    content: '\f09a';
 }
-.icon-google-plus:before {
-  content: "\f0d5";
+.icon-google-plus:before
+{
+    content: '\f0d5';
 }
-.icon-comments:before {
-  content: "\f0e6";
+.icon-comments:before
+{
+    content: '\f0e6';
 }
-.icon-flash:before {
-  content: "\f0e7";
+.icon-flash:before
+{
+    content: '\f0e7';
 }
-.icon-youtube:before {
-  content: "\f167";
+.icon-youtube:before
+{
+    content: '\f167';
 }
-.icon-graduation-cap:before {
-  content: "\f19d";
+.icon-graduation-cap:before
+{
+    content: '\f19d';
 }
-.icon-bus:before {
-  content: "\f207";
+.icon-bus:before
+{
+    content: '\f207';
 }
-.icon-user:before {
-  content: "\e902";
+.icon-user:before
+{
+    content: '\e902';
 }
-.icon-search:before {
-  content: "\e903";
+.icon-search:before
+{
+    content: '\e903';
 }
-.icon-child:before {
-  content: "\e900";
+.icon-child:before
+{
+    content: '\e900';
 }
-.icon-home:before {
-  content: "\e901";
+.icon-home:before
+{
+    content: '\e901';
 }
-.icon-music:before {
-  content: "\e904";
+.icon-music:before
+{
+    content: '\e904';
 }
 
 .navbar__filter,
@@ -194,44 +222,70 @@
 
 .offer-icon
 {
-    font-size: 45px;
-    line-height: 100px;
-
-    position: relative;
-
-    display: inline-block;
-
-    width: 100px;
-    height: 100px;
-    // margin: 0 27px;
-    margin-right: 59px;
-
-    color: $grey;
-    border: 2px solid $grey;
-    &:after
+    @include tablet
     {
-        position: absolute;
-        top: 50px;
-        left: 104px;
+        font-size: 32px;
+        line-height: 70px;
 
-        width: 50px;
+        position: relative;
 
-        content: '';
+        display: inline-block;
 
-        border-bottom: 2px solid $grey-lighter;
-    }
-    &:last-of-type
-    {
-        margin-right: 0;
+        width: 70px;
+        height: 70px;
+        // margin: 0 27px;
+        margin-right: 40px;
+
+        color: $grey;
+        border: 2px solid $grey;
         &:after
         {
-            content: none;
+            position: absolute;
+            top: 35px;
+            left: 74px;
+
+            width: 35px;
+
+            content: '';
+
+            border-bottom: 2px solid $grey-lighter;
+        }
+        &:last-of-type
+        {
+            margin-right: 0;
+            &:after
+            {
+                content: none;
+            }
+        }
+    }
+    @include desktop
+    {
+        font-size: 45px;
+        line-height: 100px;
+
+        width: 100px;
+        height: 100px;
+        // margin: 0 27px;
+        margin-right: 59px;
+        &:after
+        {
+            top: 50px;
+            left: 104px;
+
+            width: 50px;
         }
     }
 }
 
 .offer__icons
 {
+    display: none;
+
+    @include tablet
+    {
+        display: block;
+    }
     .icon-graduation-cap
     {
         color: $grey-light;
@@ -301,18 +355,6 @@
     }
 }
 
-.search__input
-{
-    line-height: 55px;
-
-    display: block;
-
-    width: 48%;
-    margin: 98px auto 28px;
-
-    background-color: rgba(255, 255, 255, .1);
-}
-
 // Select
 
 .select
@@ -321,24 +363,28 @@
     z-index: 4;
     &--open
     {
-        &.navbar__select {
-            border-radius: 22px;
-            line-height: 2;
-        }
         opacity: .8;
         background-color: #110c04;
+        &.navbar__select
+        {
+            line-height: 2;
+
+            border-radius: 22px;
+        }
         .city,
         .type,
         .select__city
         {
             display: block;
-            &:hover {
+            &:hover
+            {
                 font-weight: bold;
             }
         }
         .select__city
         {
-            &:hover {
+            &:hover
+            {
                 color: $brand-primary;
             }
         }
@@ -354,7 +400,8 @@
 
     color: $font;
     border-bottom: 1px solid $grey-lighter;
-    &:hover {
+    &:hover
+    {
         color: $brand-primary;
     }
 }
