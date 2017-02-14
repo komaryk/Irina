@@ -117,7 +117,8 @@
     background-size: cover;
 }
 
-.panel {
+.panel
+{
     background-color: $white;
 }
 
@@ -149,33 +150,30 @@
 {
     position: absolute;
     z-index: 3;
-    top: 20px;
+    top: 23px;
     right: 33px;
     left: 36px;
 
     display: none;
 
     color: $white;
-    .button--rounded
-    {
-        font-size: 12px;
-
-        margin-bottom: 15px;
-        padding: 12px 20px;
-
-        color: $white;
-        &:before
-        {
-            font-family: 'IcoMoon';
-
-            content: '\e903';
-        }
-    }
 }
 
 .hover__button
 {
+    font-size: 12px;
+
+    margin-bottom: 20px;
+    padding: 8px 20px;
+
+    color: $white;
     border: 2px solid $white;
+    &:before
+    {
+        font-family: 'IcoMoon';
+
+        content: '\e903';
+    }
 }
 
 .hover__rating

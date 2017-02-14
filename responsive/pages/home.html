@@ -12,7 +12,8 @@
 		<a href="#" class="logo">
 			<img src="../images/logo.png" alt="">
 		</a>
-		<nav class="nav header__nav--open">
+		<nav class="nav header__nav">
+		<!-- <nav class="nav header__nav header__nav--open"> -->
 			<a href="#" class="nav__item">
 				Reality
 			</a>
@@ -77,64 +78,65 @@
 	</section>
 	<div class="nav navbar">
 		<div class="container">
-			<ul class="popular">
-				<li class="popular-item popular-item__selected">
+			<ul class="navbar__popular">
+				<li class="popular__category popular__category--selected">
 					<a href="#">
 						Recommended
 					</a>
 				</li>
-				<li class="popular-item">
+				<li class="popular__category">
 					<a href="#">
 						latest
 					</a>
 				</li>
-				<li class="popular-item">
+				<li class="popular__category">
 					<a href="#">
 						Highlights
 					</a>
 				</li>
 			</ul>
-			<div class="navbar--locations">
-				<ul class="search-locations button--rounded select">
-					<li class="navbar__location location__selected">
+			<div class="navbar__location">
+				<ul class="select navbar__select button--rounded">
+					<li class="select__city select__city--selected">
 						Dubai
 					</li>
-					<li class="navbar__location">
+					<li class="select__city">
+						Kyiv
+					</li>
+					<li class="select__city">
+						Kyiv
+					</li>
+					<li class="select__city">
 						Kyiv
 					</li>
 				</ul>
-				<button class="button button--rounded button__map">
+				<button class="button button--rounded button--map">
 					Show map
 				</button>
 			</div>
-			<div class="filter">
-				<h5 class="filter-title">
+			<div class="navbar__filter">
+				<h5 class="filter__title">
 					Filter:
 				</h5>
 				<ul>
-					<li class="filter--item icon-home button-circular">
-						<a href="#" hidden>
-							Reality
+					<li>
+						<a href="#" class="filter__item icon-home" data-category="reality">
 						</a>
 					</li>
-					<li class="filter--item icon-child button-circular">
-						<a href="#" hidden>
-							Living
+					<li>
+						<a href="#" class="filter__item icon-child" data-category="Living">
 						</a>
 					</li>
-					<li class="filter--item icon-graduation-cap button-circular">
-						<a href="#" hidden>
-							Education
+					<li>
+						<a href="#" class="filter__item icon-graduation-cap" data-category="Education">
 						</a>
 					</li>
-					<li class="filter--item icon-music button-circular">
-						<a href="#" hidden>
-							Entertainment
+					<li>
+						<a href="#" class="filter__item icon-music" data-category="Entertainment">
 						</a>
 					</li>
-					<li class="filter--item icon-bus button-circular">
-						<a href="#" hidden>
-							Mobility
+					<li>
+						<a href="#" class="filter__item icon-bus" data-category="Mobility">
 						</a>
 					</li>
 				</ul>
@@ -750,17 +752,17 @@
 	                    Follow us
 	                </h5>
 	                <ul class="footer__social">
-	                    <li class="icon-facebook">
-	                        
+	                    <li>
+	                        <a href="#" class="icon-facebook"></a>
 	                    </li>
-	                    <li class="icon-twitter">
-	                        
+	                    <li>
+	                        <a href="#" class="icon-twitter"></a>
 	                    </li>
-	                    <li class="icon-google-plus">
-	                        
+	                    <li>
+	                        <a href="#" class="icon-google-plus"></a>
 	                    </li>
-	                    <li class="icon-youtube">
-	                        
+	                    <li>
+	                        <a href="#" class="icon-youtube"></a>
 	                    </li>
 	                </ul>
 	                <p class="copyright">
@@ -774,9 +776,27 @@
 <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 <script>
 $(document).ready(function(){
+	// Open and close select box on click
     $(".select").on("click", function(){
         $(this).toggleClass("select--open");
     });
+
+    //Close select box on click outside of the box
+ //    $(document).on('click', function(event) {
+	//     if (!$(event.target).is('.select--open')) {
+	//         $('.select').toggleClass('select--open');
+	//     }
+	// });
+	$(document).mouseup(function (e)
+	{
+	    var container = $(".select");
+
+	    if (!container.is(e.target) // if the target of the click isn't the container
+	        && container.hasClass('select--open') == true) // and is open
+	    {
+	        $(container).removeClass('select--open');
+	    }
+	});
 });
 </script>
 </body>

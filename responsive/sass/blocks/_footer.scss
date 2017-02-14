@@ -2,7 +2,7 @@
 {
     position: relative;
 
-    padding: 60px 0;
+    padding: 56px 0;
 
     color: $white;
     background-image: url('../images/hero-bg.png');
@@ -41,14 +41,17 @@
 {
     font-size: 24px;
 
-    margin-bottom: 25px;
+    margin-bottom: 37px;
 }
 
 .subscribe__content
 {
-    line-height: 57px;
+    line-height: 60px;
 
-    padding-right: 1px;
+    // padding-right: 1px;
+    
+    width: 50%;
+    position: relative;
 }
 .subscribe__label
 {
@@ -94,7 +97,7 @@
 {
     font-size: 0;
 
-    padding-top: 40px;
+    padding-top: 41px;
 }
 .footer__block
 {
@@ -125,12 +128,17 @@
 .footer__social
 {
     margin-bottom: 60px;
-    & > *
+    li
     {
-        font-size: 30px;
-
         display: inline-block;
 
         margin-right: 20px;
+    }
+    a
+    {
+        font-size: 30px;
+        &:hover {
+            color: $brand-primary;
+        }
     }
 }

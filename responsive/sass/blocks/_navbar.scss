@@ -1,7 +1,7 @@
 
 .navbar
 {
-    padding: 3px 0; //change!
+    padding: 6px 0;
 
     border-bottom: 1px solid $grey-lighter;
     .container
@@ -9,9 +9,9 @@
         font-size: 0;
     }
 }
-.popular,
-.navbar--locations,
-.filter
+.navbar__popular,
+.navbar__location,
+.navbar__filter
 {
     font-size: 12px;
 
@@ -21,11 +21,11 @@
 
     vertical-align: middle;
 }
-.popular
+.navbar__popular
 {
     text-align: left;
 }
-.popular-item
+.popular__category
 {
     font-weight: bold;
 
@@ -35,16 +35,13 @@
     line-height: 45px;
     padding-top: 3px;
 }
-.popular-item__selected a
+.popular__category--selected a
 {
     color: $brand-primary;
 }
-.navbar--locations
+.navbar__location
 {
-    text-align: right;
-    .search-locations {
-        left: 36.63%;
-    }
+    text-align: center;
     & > *
     {
         font-size: 12px;
@@ -52,8 +49,7 @@
 
         display: inline-block;
 
-        margin: 5px;
-        padding: 13px 18px;
+        padding: 10px 16px;
 
         text-transform: uppercase;
 
@@ -62,11 +58,13 @@
     }
 }
 
-.navbar__location
+.select__city
 {
     display: none;
+    text-align: left;
+    min-width: 92px;
 }
-.location__selected
+.select__city--selected
 {
     display: block;
 
@@ -78,15 +76,18 @@
 
         float: right;
 
-        margin-left: 27px;
-
         content: '\f078';
 
         color: $font-light;
     }
 }
 
-.button__map
+.select--open .select__city--selected:after {
+    content: '\e907';
+    margin-top: -3px;
+}
+
+.button--map
 {
     &:before
     {
@@ -100,10 +101,10 @@
         content: '\f041';
     }
 }
-.filter
+.navbar__filter
 {   
     text-align: right;
-    & > *
+    ul, li
     {
         display: inline-block;
 
@@ -111,15 +112,16 @@
         text-align: center;
     }
 }
-.filter-title
+.filter__title
 {
     font-size: 12px;
+    display: inline-block;
 
     text-transform: uppercase;
 
     color: $font-light;
 }
-.filter--item
+.filter__item
 {
     display: inline-block;
     
@@ -127,11 +129,16 @@
 
     width: 40px;
     height: 40px;
+    margin-left: 6px;
+    transition: all 0.3s;
     &:before
     {
         font-size: 20px;
         line-height: 40px;
 
         color: $white;
+    }
+    &:hover {
+        transform: scale(1.05);
     }
 }
