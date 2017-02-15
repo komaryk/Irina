@@ -9,7 +9,7 @@
 
 .price
 {
-    font-size: 12px;
+    font-size: 13px;
 
     position: absolute;
     top: 8px;
@@ -19,6 +19,9 @@
 
     color: $white;
     background-color: $green;
+    @include desktop {
+        font-size: 12px;
+    }
 }
 
 .location__post-img
@@ -33,7 +36,7 @@
 
 .location__title
 {
-    font-size: 14px;
+    font-size: 16px;
 
     overflow: hidden;
 
@@ -41,13 +44,19 @@
     margin-bottom: 11px;
 
     color: $font;
+    @include desktop {
+        font-size: 14px;
+    }
 }
 .location__host
 {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
 
     text-transform: uppercase;
+    @include desktop {
+        font-size: 12px;
+    }
 }
 
 

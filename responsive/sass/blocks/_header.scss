@@ -5,21 +5,62 @@
     text-align: right;
 
     background-color: #fff;
+    position: relative;
+    padding-top: 50px;
+    &--open {
+        .header__nav {
+        left: 0;
+        }
+    }
+    @include tablet {
+        padding-top: 0;
+    }
     & > *
     {
         font-size: 14px;
-        line-height: 74px;
+        line-height: 50px;
+        @include tablet {
+            line-height: 74px;
 
-        display: inline-block;
+            display: inline-block;
 
-        vertical-align: middle;
+            vertical-align: middle;
+        }
+    }
+    &:after {
+        content: "\e906";
+        font-family: 'IcoMoon';
+        font-weight: normal;
+        font-size: 24px;
+        color: $font;
+        position: absolute;
+        right: 10px;
+        top: 0;
+        line-height: 50px;
+        @include tablet {
+            content: none;
+        }
     }
 }
 .logo
 {
-    float: left;
-
-    margin-left: 11.7%;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    line-height: 50px;
+    @include tablet-only {
+        img {
+            width: 80%;
+        }
+    }
+    @include tablet {
+        line-height: 74px;
+    }
+}
+@media screen and (min-width: 1180px) {
+    .logo {
+        left: 11.7%;
+    }
 }
 .header__nav
 {
@@ -27,60 +68,65 @@
 
     text-align: right;
     
-    &:after {
-        content: "\e906";
-        font-family: 'IcoMoon';
-        font-weight: normal;
-        font-size: 24px;
-        color: $font;
-        float: right;
-        
-        @include desktop {
-            content: none;
-        }
+    position: absolute;
+    left: -1000px;
+    background-color: $white;
+    width: 85%;
+    z-index: 5;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 5%;
+    transition: all 0.7s ease-out;
+    border-radius: 0 0 30px 30px;
+    @include tablet {
+        display: inline-block;
+        position: static;
+        padding: 0;
+        width: auto;
     }
-    &--open {
-        .nav__item {
-            display: block;
-            width: 100%;
-            
-        }
+}
+.nav__item
+{
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px dashed $grey;
+    &:last-of-type {
+        border: none;
     }
-    .nav__item
-    {
-        font-size: 14px;
-        font-weight: bold;
-
-        display: none;
-
-        padding: 0 10px;
-
+    @include tablet {
+        display: inline-block;
+        padding: 0 6px;
         vertical-align: middle;
-        @include desktop {
-            display: inline-block;
-        }
+        border: none;
+    }
+    @include desktop {
+        padding: 0 10px;
     }
 }
 .header__button
 {
-    // float: right;
-    // clear: both;
-    // width: 50%;
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
     &:before
     {
         font-family: 'IcoMoon';
         font-weight: normal;
     }
 }
-
 .header__button--search
 {
     font-size: 0;
 
     box-sizing: border-box;
-    height: 74px;
-
+    
     background-color: $grey-lighter;
+    height: 50px;
+    @include tablet {
+        height: 74px;
+        width: auto;
+    }
     &:before
     {
         font-size: 24px;
@@ -93,13 +139,19 @@
 .header__button--login
 {
     font-weight: bold;
-
-    width: 24.4%;
-
     text-align: left;
     text-transform: uppercase;
 
     background-color: $brand-primary;
+    @include tablet-only {
+        width: auto;
+        span {
+            display: none;
+        }
+    }
+    @include desktop {
+        width: 24.4%;
+    }
     &:before
     {
         font-size: 18px;
@@ -109,5 +161,8 @@
 
         content: '\e902';
         vertical-align: middle;
+        @include tablet-only {
+            padding: 0 25px;
+        }
     }
 }

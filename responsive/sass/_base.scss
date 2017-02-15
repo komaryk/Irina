@@ -12,10 +12,12 @@ body {
 	a {
     color: $font-light;
     text-transform: uppercase;
-    line-height: 1;
-    &:hover {
-    	color: $font;
-    	}
+    // line-height: 1;
+    @include desktop {
+	    &:hover {
+	    	color: $font;
+	    	}
+	    }
 	}
 }
 

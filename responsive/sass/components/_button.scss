@@ -71,93 +71,74 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-chevron-up:before
-{
-    content: '\e907';
+.icon-equalizer:before {
+  content: "\e908";
 }
-.icon-bars:before
-{
-    content: '\e906';
+.icon-child:before {
+  content: "\e900";
 }
-.icon-arrow-right:before
-{
-    content: '\e905';
+.icon-chevron-up:before {
+  content: "\e907";
 }
-.icon-envelope-o:before
-{
-    content: '\f003';
+.icon-bars:before {
+  content: "\e906";
 }
-.icon-star:before
-{
-    content: '\f005';
+.icon-arrow-right:before {
+  content: "\e905";
 }
-.icon-star-o:before
-{
-    content: '\f006';
+.icon-envelope-o:before {
+  content: "\f003";
 }
-.icon-map-marker:before
-{
-    content: '\f041';
+.icon-star:before {
+  content: "\f005";
 }
-.icon-leaf:before
-{
-    content: '\f06c';
+.icon-star-o:before {
+  content: "\f006";
 }
-.icon-chevron-down:before
-{
-    content: '\f078';
+.icon-map-marker:before {
+  content: "\f041";
 }
-.icon-twitter:before
-{
-    content: '\f099';
+.icon-leaf:before {
+  content: "\f06c";
 }
-.icon-facebook:before
-{
-    content: '\f09a';
+.icon-chevron-down:before {
+  content: "\f078";
 }
-.icon-google-plus:before
-{
-    content: '\f0d5';
+.icon-twitter:before {
+  content: "\f099";
 }
-.icon-comments:before
-{
-    content: '\f0e6';
+.icon-facebook:before {
+  content: "\f09a";
 }
-.icon-flash:before
-{
-    content: '\f0e7';
+.icon-google-plus:before {
+  content: "\f0d5";
 }
-.icon-youtube:before
-{
-    content: '\f167';
+.icon-comments:before {
+  content: "\f0e6";
 }
-.icon-graduation-cap:before
-{
-    content: '\f19d';
+.icon-flash:before {
+  content: "\f0e7";
 }
-.icon-bus:before
-{
-    content: '\f207';
+.icon-youtube:before {
+  content: "\f167";
 }
-.icon-user:before
-{
-    content: '\e902';
+.icon-graduation-cap:before {
+  content: "\f19d";
 }
-.icon-search:before
-{
-    content: '\e903';
+.icon-bus:before {
+  content: "\f207";
 }
-.icon-child:before
-{
-    content: '\e900';
+.icon-user:before {
+  content: "\e902";
 }
-.icon-home:before
-{
-    content: '\e901';
+.icon-search:before {
+  content: "\e903";
 }
-.icon-music:before
-{
-    content: '\e904';
+.icon-home:before {
+  content: "\e901";
+}
+.icon-music:before {
+  content: "\e904";
 }
 
 .navbar__filter,
@@ -189,7 +170,8 @@
 
 .post-icon,
 .offer-icon,
-.text-icon
+.text-icon,
+.navbar__button
 {
     border-radius: 50%;
 }
@@ -197,7 +179,7 @@
 .post-icon
 {
     font-size: 24px;
-    line-height: 60px;
+    line-height: 55px;
 
     position: absolute;
     z-index: 2;

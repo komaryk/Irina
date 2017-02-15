@@ -4,6 +4,10 @@ $(document).ready(function(){
         $(this).toggleClass("select--open");
     });
 
+    $(".header").on("click", function(){
+        $(this).toggleClass("header--open");
+    });
+
     //Close select box on click outside of the box
  //    $(document).on('click', function(event) {
 	//     if (!$(event.target).is('.select--open')) {
