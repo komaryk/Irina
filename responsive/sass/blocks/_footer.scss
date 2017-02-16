@@ -54,7 +54,8 @@
     line-height: 60px;
 
     position: relative;
-    // padding-right: 1px;
+    padding-right: 130px;
+    padding-left: 30px;
 
     width: 100%;
     max-width: 550px;
@@ -64,9 +65,7 @@
 }
 .subscribe__label
 {
-    position: relative;
-
-    
+    position: relative;    
     i
     {
         margin-right: 30px;
@@ -74,15 +73,18 @@
 }
 
 @media screen and (min-width: 400px) {
+    .subscribe__content {
+        padding-left: 68px;
+    }
     .subscribe__label {
-        padding-left: 40px;
+        // padding-left: 40px;
         &:before
         {
             font-family: 'IcoMoon';
             font-size: 18px;
 
             position: absolute;
-            left: 0;
+            left: -36px;
 
             content: '\f003';
         }
@@ -98,9 +100,8 @@
     font-weight: 300;
 
     color: $white;
-    @include desktop {
-        width: 67%;
-    }
+    width: 100%;
+    box-sizing: border-box;
     &::-webkit-input-placeholder
     {
         color: $white;

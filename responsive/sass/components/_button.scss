@@ -343,6 +343,8 @@
 {
     position: absolute;
     z-index: 4;
+    padding: 0;
+    overflow: hidden;
     &--open
     {
         opacity: .8;
@@ -361,6 +363,18 @@
             &:hover
             {
                 font-weight: bold;
+                background-color: $white;
+                color: $font;
+            }
+        }
+        .city--selected,
+        .type--selected,
+        .select__city--selected
+        {
+            &:after
+            {
+                content: '\e907';
+                margin-top: -3px;
             }
         }
         .select__city
@@ -368,6 +382,7 @@
             &:hover
             {
                 color: $brand-primary;
+                background-color: transparent;
             }
         }
     }
