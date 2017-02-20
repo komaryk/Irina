@@ -152,6 +152,7 @@ label {
 .wrap--outer {
   font-size: 0;
   margin: 20px;
+  min-width: 750px;
 }
 
 .wrap__button {
