@@ -1,0 +1,12 @@
+body {
+	position: relative;
+}
+.wrap {
+	height: 500px;
+}
+
+.myClass {
+	font-size: 48px;
+	color: pink;
+	width: 100px;
+}
