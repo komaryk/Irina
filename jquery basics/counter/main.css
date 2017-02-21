@@ -1,12 +1,22 @@
-body {
-	position: relative;
+body
+{
+    position: relative;
 }
-.wrap {
-	height: 500px;
+.wrap
+{
+    height: 500px;
 }
 
-.myClass {
-	font-size: 48px;
-	color: pink;
-	width: 100px;
+.myClass
+{
+    font-size: 48px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100px;
+    margin: 0;
+
+    color: pink;
 }

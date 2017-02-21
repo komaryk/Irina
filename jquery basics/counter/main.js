@@ -1,11 +1,19 @@
 $(document).ready(function(){
+	$(document).on("click", function(){
+			//Duplicate a block, prevent changing its position by removing the class
+        	$(".js-myClass").clone().appendTo("body").removeClass("js-myClass");
+        });
+	//Get cursor coordinates
     $(document).on( "mousemove", function( event ) {
         $(document).on("click", function(){
-            $(".myClass").offset({top: event.pageY, left: event.pageX});
+        	//Change block's position
+            $(".js-myClass").offset({top: event.pageY, left: event.pageX});
         });
     });
     $(document).on("click", function(){
-            var value = $(".myClass").data().value + 1;
-            $(".myClass").text(value).data().value = value;
+    		//Count clicks
+            var value = $(".js-myClass").data().value + 1;
+            //Change text value
+            $(".js-myClass").text(value).data().value = value;
         });
 });
