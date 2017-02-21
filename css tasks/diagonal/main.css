@@ -1,0 +1,198 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
+h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, tt, var, b, u, i, center, dl, dt,
+dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+body, html {
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  line-height: 1;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  speak: none;
+  font-family: 'Roboto', Arial, sans-serif;
+  cursor: default !important;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img,
+fieldset,
+a img {
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+svg > path {
+  transition: fill 0.5s ease;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  outline: 0;
+  text-decoration: none;
+}
+
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+input[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  font-family: 'Roboto', Arial, sans-serif;
+  overflow: auto;
+}
+
+input, button, textarea {
+  margin: 0;
+  padding: 0;
+  background: 0;
+  border: 0;
+}
+
+input,
+textarea {
+  resize: none;
+  user-select: text;
+}
+
+input {
+  -webkit-appearance: button;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+input, textarea, select, button,
+h1, h2, h3, h4, h5, h6, a, span, a:focus {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 0;
+  vertical-align: middle;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+label {
+  cursor: pointer;
+}
+.diagonal-wrap {
+  overflow: hidden;
+  padding-bottom: 80px;
+}
+.diagonal {
+  margin: 0;
+  position: relative;
+  padding: 50px;
+  font-size: 24px;
+  color: #E3CDA4;
+  letter-spacing: 0.5px;
+}
+.diagonal--border {
+  background-color: #703030;
+}
+.diagonal--border:after {
+  position: absolute;
+  top: 124px;
+  left: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  border-top: 45px solid #703030;
+  border-right: 1400px solid transparent;
+  content: "";
+}
+.diagonal--translate {
+  background-color: #2F343B;
+}
+.diagonal--translate:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  width: 120%;
+  transform: translate(-30px, 20px) rotate(-2deg);
+  content: "";
+  background-color: #2F343B;
+  z-index: -1;
+}
+.diagonal--clip {
+  background-color: #7E827A;
+  padding-bottom: 95px;
+  -webkit-clip-path: polygon(100% 0, 100% 65%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 65%, 0 100%, 0 0);
+}
