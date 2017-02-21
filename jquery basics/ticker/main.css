@@ -1,0 +1,21 @@
+.ticker__wrap {
+	background-color: #292727;
+	background-image: linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+	linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+	background-size: 10px 10px, 10px 10px;
+	background-position: -1px -1px, -1px -1px;
+	background-repeat: repeat;
+	overflow: hidden;
+}
+.ticker__text {
+	font-size: 18px;
+	color: #00FF08;
+	font-weight: bold;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+    white-space:nowrap;
+    display:inline-block;
+}
+.ticker__text p {
+	display: inline-block;
+}
