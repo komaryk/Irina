@@ -14,5 +14,5 @@ $(document).ready(function(e){
 });
 // Get input value
 $(document).on('input', '#range', function() {
-    speed = $(this).val() * 10;
+    speed = $(this).val();
 });
