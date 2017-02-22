@@ -1,0 +1,411 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video
+{
+    margin: 0;
+    padding: 0;
+
+    vertical-align: baseline;
+
+    border: 0;
+}
+
+body,
+html
+{
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1;
+
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+
+    cursor: default !important;
+    -webkit-user-select: none;
+            user-select: none;
+
+            text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: transparent;
+            tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-touch-callout: none;
+    -ms-touch-action: none;
+        touch-action: none;
+    speak: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary
+{
+    display: block;
+}
+
+audio,
+canvas,
+progress,
+video
+{
+    display: inline-block;
+
+    vertical-align: baseline;
+}
+
+audio:not([controls])
+{
+    display: none;
+
+    height: 0;
+}
+
+img,
+fieldset,
+a img
+{
+    border: none;
+}
+
+img
+{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    vertical-align: middle;
+}
+
+svg
+{
+    vertical-align: middle;
+}
+
+svg > path
+{
+    transition: fill .5s ease;
+}
+
+a
+{
+    text-decoration: none;
+
+    color: #fff;
+}
+
+a:active,
+a:hover
+{
+    text-decoration: none;
+
+    outline: 0;
+}
+
+input[type='submit'],
+button
+{
+    cursor: pointer;
+}
+
+input[type='submit']::-moz-focus-inner,
+button::-moz-focus-inner
+{
+    padding: 0;
+
+    border: 0;
+}
+
+textarea
+{
+    font-family: 'Roboto', Arial, sans-serif;
+
+    overflow: auto;
+}
+
+input,
+button,
+textarea
+{
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    background: 0;
+}
+
+input,
+textarea
+{
+    resize: none;
+    user-select: text;
+}
+
+input
+{
+    -webkit-appearance: button;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator
+{
+    display: none;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill
+{
+    color: #000 !important;
+    background-color: #fff !important;
+}
+
+input,
+textarea,
+select,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+a:focus
+{
+    outline: none;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+table
+{
+    width: 100%;
+
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+td,
+th
+{
+    padding: 0;
+
+    vertical-align: middle;
+}
+
+code,
+kbd,
+pre,
+samp
+{
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+label
+{
+    cursor: pointer;
+}
+body
+{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+
+    background-color: #3d3d3d;
+}
+.container
+{
+    max-width: 980px;
+    margin: 2rem auto;
+}
+nav
+{
+    margin-bottom: 4rem;
+
+    background-color: #83aa30;
+}
+.menu
+{
+    font-size: 0;
+}
+.menu__item a,
+.sub-menu__item a
+{
+    display: block;
+
+    transition: all .3s;
+
+    color: #000;
+}
+.menu__item,
+.sub-menu__item
+{
+    font-size: 16px;
+    line-height: 3rem;
+
+    position: relative;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.menu__item a:hover,
+.sub-menu__item a:hover
+{
+    background-color: #e74700;
+}
+.menu__item
+{
+    display: inline-block;
+
+    vertical-align: top;
+}
+.menu__item a
+{
+    padding: 0 2rem;
+}
+.sub-menu
+{
+    position: absolute;
+    top: 3rem;
+    left: 0;
+
+    display: none;
+
+    width: auto;
+
+    background-color: #83aa30;
+}
+.menu__item:hover > .sub-menu,
+.sub-menu__item:hover > .sub-menu--inner
+{
+    display: inherit;
+}
+.sub-menu__item
+{
+    width: 15rem;
+}
+.sub-menu__item a
+{
+    padding-left: 1rem;
+}
+.sub-menu--inner
+{
+    left: 15rem;
+
+    display: none;
+
+    margin-top: -3rem;
+}
+
+
+
+
+
+
+
+.page-title
+{
+    font-size: 36px;
+
+    margin-bottom: 2rem;
+}
+.page-title,
+.caption
+{
+    text-align: center;
+
+    color: #1499d3;
+}
+.caption
+{
+    font-size: 24px;
+    line-height: 2rem;
+
+    text-align: center;
+}
