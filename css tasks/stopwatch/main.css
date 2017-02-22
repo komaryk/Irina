@@ -1,0 +1,361 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
+h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, tt, var, b, u, i, center, dl, dt,
+dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+body, html {
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  line-height: 1;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  speak: none;
+  font-family: 'Roboto', Arial, sans-serif;
+  cursor: default !important;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img,
+fieldset,
+a img {
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+svg > path {
+  transition: fill 0.5s ease;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  outline: 0;
+  text-decoration: none;
+}
+
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+input[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  font-family: 'Roboto', Arial, sans-serif;
+  overflow: auto;
+}
+
+input, button, textarea {
+  margin: 0;
+  padding: 0;
+  background: 0;
+  border: 0;
+}
+
+input,
+textarea {
+  resize: none;
+  user-select: text;
+}
+
+input {
+  -webkit-appearance: button;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+input, textarea, select, button,
+h1, h2, h3, h4, h5, h6, a, span, a:focus {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 0;
+  vertical-align: middle;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+label {
+  cursor: pointer;
+}
+
+/* General */
+
+@font-face
+{
+    font-family: 'Digital';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('fonts/digital-7.mono.eot');
+    src: local('☺'), url('fonts/digital-7.mono.woff') format('woff'), url('fonts/digital-7.mono.ttf') format('truetype'), url('fonts/digital-7.mono.svg') format('svg');
+}
+body
+{
+    font-family: 'Digital';
+
+    background-color: #e9e9e9;
+}
+.container
+{
+    padding: 50px 100px;
+
+    text-align: center;
+}
+.timer
+{
+    display: inline-block;
+    overflow: hidden;
+
+    margin-bottom: 5px;
+    padding: 10px;
+
+    border: 6px solid #32cd32;
+    background-color: #292727;
+    background-image: linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+    background-repeat: repeat;
+    background-position: -1px -1px, -1px -1px;
+    background-size: 10px 10px, 10px 10px;
+}
+.cell
+{
+    font-family: 'Digital';
+    font-size: 3rem;
+
+    position: relative;
+
+    display: inline-block;
+    overflow: hidden;
+
+    width: 1.4rem;
+    height: 2.4rem;
+
+    color: #32cd32;
+}
+.numbers
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: inline-block;
+
+    text-align: center;
+}
+
+/* Animations */
+
+@-webkit-keyframes moveten
+{
+    to
+    {
+        top: -30rem;
+    }
+}
+@keyframes moveten
+{
+    to
+    {
+        top: -30rem;
+    }
+}
+@-webkit-keyframes movesix
+{
+    to
+    {
+        top: -18rem;
+    }
+}
+@keyframes movesix
+{
+    to
+    {
+        top: -18rem;
+    }
+}
+.moveten
+{
+    -webkit-animation: moveten 1s steps(10, end) infinite paused;
+       -moz-animation: moveten 1s steps(10, end) infinite paused;
+         -o-animation: moveten 1s steps(10, end) infinite paused;
+            animation: moveten 1s steps(10, end) infinite paused;
+}
+
+.movesix
+{
+    -webkit-animation: movesix 1s steps(6, end) infinite paused;
+       -moz-animation: movesix 1s steps(6, end) infinite paused;
+         -o-animation: movesix 1s steps(6, end) infinite paused;
+            animation: movesix 1s steps(6, end) infinite paused;
+}
+.milisecond
+{
+    -webkit-animation-duration: 1s;
+       -moz-animation-duration: 1s;
+         -o-animation-duration: 1s;
+            animation-duration: 1s;
+}
+.second
+{
+    -webkit-animation-duration: 10s;
+       -moz-animation-duration: 10s;
+         -o-animation-duration: 10s;
+            animation-duration: 10s;
+}
+.tensecond
+{
+    -webkit-animation-duration: 60s;
+       -moz-animation-duration: 60s;
+         -o-animation-duration: 60s;
+            animation-duration: 60s;
+}
+.minute
+{
+    -webkit-animation-duration: 600s;
+       -moz-animation-duration: 600s;
+         -o-animation-duration: 600s;
+            animation-duration: 600s;
+}
+.tenminute
+{
+    -webkit-animation-duration: 3600s;
+       -moz-animation-duration: 3600s;
+         -o-animation-duration: 3600s;
+            animation-duration: 3600s;
+}
+.hour
+{
+    -webkit-animation-duration: 36000s;
+       -moz-animation-duration: 36000s;
+         -o-animation-duration: 36000s;
+            animation-duration: 36000s;
+}
+.tenhour
+{
+    -webkit-animation-duration: 360000s;
+       -moz-animation-duration: 360000s;
+         -o-animation-duration: 360000s;
+            animation-duration: 360000s;
+}
+
+/* Controls */
+#timer_controls label
+{
+    display: inline-block;
+
+    padding: 5px 6px 3px;
+
+    background-color: #fff;
+    transition: background-color .2s;
+    box-shadow: 0 2px 5px #292727;
+}
+#timer_controls label:active
+{
+    -webkit-transform: translateY(2px);
+       -moz-transform: translateY(2px);
+        -ms-transform: translateY(2px);
+         -o-transform: translateY(2px);
+            transform: translateY(2px);
+}
+#timer_controls label:hover
+{
+  background-color: #32cd32;
+}
+input[name='controls']
+{
+    display: none;
+}
+
+#stop:checked ~ .timer .numbers
+{
+    -webkit-animation-play-state: paused;
+       -moz-animation-play-state: paused;
+         -o-animation-play-state: paused;
+            animation-play-state: paused;
+}
+#start:checked ~ .timer .numbers
+{
+    -webkit-animation-play-state: running;
+       -moz-animation-play-state: running;
+         -o-animation-play-state: running;
+            animation-play-state: running;
+}
+#reset:checked ~ .timer .numbers
+{
+    -webkit-animation: none;
+       -moz-animation: none;
+         -o-animation: none;
+            animation: none;
+}
